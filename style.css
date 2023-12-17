@@ -1,0 +1,186 @@
+* {
+  margin: 0;
+  padding: 0;
+  /* outline: 2px solid lime; */
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: serif-serif;
+}
+
+i,
+svg {
+  pointer-events: none;
+}
+
+html {
+  font-size: 62.5%;
+  background-color: #1d3557;
+  color: white;
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+#title {
+  font-size: 5rem;
+  font-weight: 800;
+  letter-spacing: 0.2rem;
+  font-family: "Times New Roman", Times, serif;
+  color: #408fde;
+}
+
+/* ================================= */
+
+.kick-pad,
+.snare-pad,
+.hihat-pad {
+  width: 5rem;
+  height: 5rem;
+  margin: 1rem 0.5rem;
+  cursor: pointer;
+}
+
+.pad {
+  transition: all 0.5s ease;
+  /* outline: 2px solid #8f40de; */
+}
+
+.kick-pad {
+  background: #d2b3b5;
+  outline: 3px solid #e63946;
+}
+
+.snare-pad {
+  background: #555e63;
+  outline: 3px solid #457b9d;
+}
+
+.hihat-pad {
+  background: #4a6261;
+  outline: 3px solid #2a9d8f;
+}
+
+.kick-pad.active {
+  background: #e63946;
+}
+.snare-pad.active {
+  background: #457b9d;
+}
+.hihat-pad.active {
+  background: #2a9d8f;
+}
+
+.sequencer {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  outline: 3px solid rgb(157, 211, 8);
+}
+
+.kick-track,
+.snare-track,
+.hihat-track {
+  display: flex;
+  align-items: center;
+  width: 70%;
+  justify-content: space-between;
+}
+
+.kick,
+.snare,
+.hihat {
+  display: flex;
+  width: 70%;
+}
+
+.controls {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  width: 35%;
+  margin: 0rem 2rem;
+  /* outline: 3px solid rgb(157, 211, 8); */
+  padding: 0.4rem;
+  border-radius: 10px;
+}
+
+.controls button {
+  padding: 1rem;
+  border: none;
+  /* background: rgb(70, 70, 70); */
+  background: #2c2c54;
+  outline: 3px solid #4040de;
+  color: white;
+  font-size: 2rem;
+  cursor: pointer;
+  transition: all 0.5 ease;
+  margin-left: 1rem;
+}
+
+.play {
+  padding: 1rem 2rem;
+  font-size: 2rem;
+  background: #2c2c54;
+  outline: 3px solid #4040de;
+  border-radius: 10px;
+  color: white;
+  border: none;
+  cursor: pointer;
+  margin-top: 3rem;
+}
+
+.mute {
+  width: 5.5rem;
+  height: 5.5rem;
+  border-radius: 50%;
+}
+
+/* sambung itu arti 2 classes at the same element */
+.mute.active {
+  background: rgb(202, 39, 39);
+}
+
+.tempo {
+  margin: 3rem;
+  width: 30%;
+}
+
+.tempo-slider {
+  padding: 0.2rem;
+  -webkit-appearance: none;
+  margin: 1rem 0;
+  width: 100%;
+  position: relative;
+  background: rgb(88, 88, 88);
+  cursor: pointer;
+  border-radius: 1rem;
+  background: #2c2c54;
+  outline: 3px solid #4040de;
+  border-radius: 10px;
+}
+
+.tempo p {
+  font-size: 1.5rem;
+  margin: 1.5rem;
+  text-align: center;
+}
+
+@keyframes playTrack {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.2);
+  }
+}
